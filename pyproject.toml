@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pytest-inject-config"
 version = "1.0.0"
-description = "A pytest plugin that loads a JSON file given by --config-path and injects it into test classes as self.config."
+description = "A pytest plugin that loads a JSON or YAML file given by --config-path and injects it into test classes as self.config."
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
@@ -18,6 +18,7 @@ keywords = [
     "config",
     "configuration",
     "json",
+    "yaml",
 ]
 
 classifiers = [
@@ -31,6 +32,7 @@ classifiers = [
 
 dependencies = [
     "pytest>=9.2.0",
+    "pyyaml>=6.0.3",
 ]
 
 [dependency-groups]
